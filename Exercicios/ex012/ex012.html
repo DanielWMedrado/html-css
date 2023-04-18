@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midia</title>
+</head>
+<body>
+    <h1>Trabalhando Com video</h1>
+    <p>formatos aceitos: MP4, M4V, WEBM, OGV</p>
+    <p>Sempre é importante ter videos em varios formatos pois cada navegador pode ter o seu</p>
+
+    <p>Este video está hospedado no meu própio servidor</p>
+
+    <h2>Video Simples</h2>
+    <video src="midia/limão.mp4" width="560" controls></video>
+
+    <h2>Video da forma certa (Mas dessa forma o site ira travar por conta do peso dos videos)</h2>
+    <video controls width="560" poster="imagens/limoes-capa.png" loop autoplay>
+        <source src="midia/Limão-Social720p.mp4" type="video/mp4">
+        <source src="midia/Limão-social720p.webm" type="video/webm">
+        <source src="midia/Limão-2.mkv" type="video/mkv">
+        <source src="midia/limão.ogv" type="video/ogv">
+        <p>seu navegador não suporta os formatos do video</p>
+    </video>
+
+    <h1>Inserindo videos do youtube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LW0bhKitRBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <p>O vimeo é uma otima opção para usar</p>
+    <iframe src="https://player.vimeo.com/video/185871317?h=a63f42bf1b&autoplay=1&loop=1&portrait=0" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

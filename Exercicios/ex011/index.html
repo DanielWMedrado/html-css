@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmicas</h1>
+    <p>Essas imagens irão se adaptar a o dispositivo que você usar ou o tamanho da aba do google
+    </p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="Imagens/foto-g.png" alt="imagem flexivel">
+    </picture>
+
+    <h1>Reproduzinso Áudio</h1>
+    <p>Vamos aprender a reptoduzir áudios em HTML.</p>
+    <p>Tags e parametros usados</p>
+    <ul>
+        <li><abbr title="Essa tag vai possibilitar colocar áudio no site">audio</abbr></li>
+        <li><abbr title="Ele é um parametro que fara com que o áudio rode automaticamnete">autoplay</abbr></li>
+        <li><abbr title="ele ira criar um controle do audio o usuario tera o controle do áudio">controls</abbr></li>
+        <li><abbr title="ele vai tentar rodar o arquivo em outros formatos colocados pelo desenvolovedor ou se não houver nenhum ele vai imprimir o texto colocado pelo desenvolovedor">loop</abbr></li>
+    </ul>
+    <!--
+        Essa forma é muito basica por isso pode dar errado
+    <audio src="midia/nãoparedecrer.mpeg"  controls ></audio>
+-->
+    <!--Formatos com compatibilidade de todos os navegadores MP3 WAV OGG-->
+
+    <!--O preload tem três atributos
+    auto: Vai carregar o audio sem que o usuario aperte o play
+    metadata: Vai carregar algumas informações do arquivo como: nome tamanho e tempo
+    none: Não vai carregar nada-->
+    <audio preload="metadata" controls loop>
+        <source src="midia/nãoparedecrer.mpeg" type="audio/mpeg">
+        <!--Aqui o site vai tentar rodar o audio em dois formatos nessa ordem-->
+
+        <source src="midia/nãoparedecrer.wav" type="audio/wav">
+        <!--Wav não é um tipo de arquivo muito recomendado pois ele é muito pesado-->
+        <p>Infelizmnete o seu navegador não consegue reproduzir o áudio <a href="midia/nãoparedecrer.mpeg">clique aqui</a> para dowload</p>
+    </audio>
+
+    
+</body>
+</html>
